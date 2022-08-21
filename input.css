@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font we use it */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/***below some of class we used more than once***/
+@layer components {/*______________ nav class ____________*/
+    .list-nav {
+        @apply list-none inline-block mx-2 min-browser:mx-4 min-tablet:mx-10 tablet:mx-14 laptop:mx-24 relative text-lg min-tablet:text-xl tablet:text-xl laptop:text-xl pb-0.5 duration-1000 ease-in-out;
+    }
+    .list-nav a {
+        @apply before:left-0 before:right-0 before:bottom-0 before:h-0.5 before:absolute before:bg-white  before:scale-x-0 before:hover:scale-x-100 before:duration-500 before:ease-in-out;
+    }
+    /*_____________ card class ___________*/
+    .card {
+        @apply w-[9.2rem] min-browser:w-36 tablet:w-44 laptop:w-[181px] h-40 min-browser:h-36 tablet:h-48 laptop:h-48 py-3 px-4 m-[20px] min-browser:m-0 min-browser:mb-4 min-tablet:mx-3 min-tablet:my-2 tablet:m-0 laptop:m-0 rounded-2xl box-border cursor-pointer bg-cover transition-all hover:scale-105 ease-in-out;
+    }
+    .card h2 {
+        @apply h-8 text-sm font-bold text-center laptop:text-lg min-browser:mb-2 tablet:mb-0;
+    }
+    .card p {
+        @apply leading-4 mt-0 text-center text-[10px] tablet:text-xs laptop:text-xs tablet:mx-4 laptop:mx-4;
+    }
+    .card p span {
+        @apply hidden laptop:block tablet:block;
+    }
+    .card1 {
+        @apply bg-[url('../images/pic-1.jpg')] laptop:mx-44 laptop:mb-4;
+    }
+    .card2 {
+        @apply bg-[url('../images/pic-2.jpg')];
+    }
+    .card3 {
+        @apply bg-[url('../images/pic-3.jpg')];
+    }
+    .card4 {
+        @apply bg-[url('../images/pic-4.jpg')];
+    }
+    /*_________________ form: name-and-email class ____________*/
+    .name-and-email {
+        @apply w-full bg-gray-100 bg-opacity-50 rounded border border-gray-200 focus:border-blue-400 focus:bg-gray-100 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out
+    }
+}
